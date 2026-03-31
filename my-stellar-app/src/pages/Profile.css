@@ -1,0 +1,167 @@
+/* ── Profile page ─────────────────────────────────────────────────────── */
+
+.profile-root {
+  position: relative;
+  min-height: 100vh;
+  font-family: var(--font-body, "Plus Jakarta Sans", sans-serif);
+}
+
+/* Light frosted bg.jpg */
+.profile-bg {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      160deg,
+      rgba(230, 248, 244, 0.88) 0%,
+      rgba(240, 252, 248, 0.82) 50%,
+      rgba(220, 240, 236, 0.90) 100%
+    ),
+    url("/bg.jpg") center / cover no-repeat;
+  z-index: 0;
+}
+
+/* ── Profile Navbar ────────────────────────────────────────────────────── */
+.profile-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 62px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(11, 139, 123, 0.12);
+  box-shadow: 0 2px 16px rgba(10, 43, 41, 0.06);
+}
+
+.profile-nav-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.profile-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.profile-nav-icon {
+  font-size: 1.4rem;
+  color: #0b8b7b;
+  filter: drop-shadow(0 0 6px rgba(11, 139, 123, 0.4));
+}
+
+.profile-nav-title {
+  font-family: var(--font-display, "Chakra Petch", sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #0e1f20;
+}
+
+.profile-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-wallet-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border: 1px solid #d8e1df;
+  border-radius: 999px;
+  background: #f2f8f6;
+}
+
+.profile-wallet-addr {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  color: #2e4345;
+}
+
+/* Wallet dot (reusing shared class from App.css) */
+.wallet-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+  flex-shrink: 0;
+}
+
+.wallet-dot.connected {
+  background: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+}
+
+/* Action buttons */
+.profile-action-btn {
+  padding: 7px 16px;
+  border-radius: 999px;
+  font: 600 0.82rem/1 var(--font-body, sans-serif);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.profile-action-btn.refresh {
+  border: 1px solid #aec2bc;
+  background: #fff;
+  color: #0b8b7b;
+}
+
+.profile-action-btn.refresh:hover:not(:disabled) {
+  background: #dff5f2;
+  border-color: #0b8b7b;
+}
+
+.profile-action-btn.refresh:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.profile-action-btn.disconnect {
+  border: 1px solid #e8a396;
+  background: #fff;
+  color: #b13a2f;
+}
+
+.profile-action-btn.disconnect:hover {
+  background: #ffe9e4;
+  border-color: #b13a2f;
+}
+
+/* ── Content wrapper (above fixed bg) ─────────────────────────────────── */
+.profile-content {
+  position: relative;
+  z-index: 5;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .profile-nav {
+    padding: 0 16px;
+    height: auto;
+    min-height: 56px;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .profile-nav-right {
+    flex-wrap: wrap;
+  }
+  .profile-wallet-addr {
+    font-size: 0.74rem;
+  }
+}
