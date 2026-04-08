@@ -184,8 +184,8 @@ soroban contract deploy \
 To point to a different contract, edit `src/lib/stellar.js`:
 
 ```js
-export const CONTRACT_ID = "YOUR_CONTRACT_ID_HERE";
-export const DEMO_ADDR   = "YOUR_DEMO_ADDRESS_HERE";
+export const CONTRACT_ID = "CDWSDQBODP6KAILO2TQB54YVY76IS43ME4DDLZ5QPYMGCLEHB7FRUZLS";
+export const DEMO_ADDR = "GDGPCDOK57AM3VSX3GK4R67C6IAKG5GE2FJ6VD5UL2CZJFTPAUMSY2CX";
 ```
 
 - **`CONTRACT_ID`** — The deployed Soroban contract address
