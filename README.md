@@ -13,11 +13,11 @@ A decentralized peer-to-peer resource sharing platform built on the **Stellar So
 
 ### 🔹 Main Dashboard
 
-![Dashboard](./public/Screenshot%202026-03-31%20000100.png)
+![Dashboard](./my-stellar-app/public/Screenshot%202026-03-31%20000100.png)
 
 ### 🔹 Resource Actions & Logs
 
-![Resource Actions](./public/Screenshot%202026-03-31%20000206.png)
+![Resource Actions](./my-stellar-app/public/Screenshot%202026-03-31%20000206.png)
 
 ---
 
